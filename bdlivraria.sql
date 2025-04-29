@@ -32,11 +32,11 @@ USE `bdlivraria`;
 DROP TABLE IF EXISTS `cliente`;
 CREATE TABLE `cliente` (
   `cpf` varchar(20) NOT NULL,
-  `nome` varchar(25) NOT NULL,
-  `endereco` varchar(20) NOT NULL,
-  `cidade` varchar(20) NOT NULL,
-  `idade` varchar(3) NOT NULL,
-  `telefone` varchar(12) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `endereco` varchar(40) NOT NULL,
+  `cidade` varchar(30) NOT NULL,
+  `idade` int NOT NULL,
+  `telefone` varchar(16) NOT NULL,
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -51,7 +51,7 @@ CREATE TABLE `livro` (
   `isbn` varchar(20) NOT NULL,
   `nome` varchar(40) NOT NULL,
   `tipo` varchar(15) NOT NULL,
-  `valor` varchar(3) NOT NULL,
+  `valor` double(5,2) NOT NULL,
   `datapubli` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
